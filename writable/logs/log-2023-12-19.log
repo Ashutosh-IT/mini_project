@@ -1,0 +1,73 @@
+ERROR - 2023-12-19 10:31:14 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\crud_in_ci\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\crud_in_ci\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `student...', 0)
+#1 C:\xampp\htdocs\crud_in_ci\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student...')
+#2 C:\xampp\htdocs\crud_in_ci\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student...')
+#3 C:\xampp\htdocs\crud_in_ci\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `student...', Array, false)
+#4 C:\xampp\htdocs\crud_in_ci\system\Model.php(442): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\crud_in_ci\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\crud_in_ci\app\Controllers\Crud.php(53): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\crud_in_ci\system\CodeIgniter.php(942): App\Controllers\Crud->delete('2121444')
+#8 C:\xampp\htdocs\crud_in_ci\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#9 C:\xampp\htdocs\crud_in_ci\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\crud_in_ci\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-19 10:31:14 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `students` SET `deleted_at` = :deleted_at:, `updated_at` = :updated_at:
+WHERE `urn` IN :urn:
+AND `deleted_at` IS NULL', [...], false)
+ 2 SYSTEMPATH\Model.php(442): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\Crud.php(53): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Crud->delete('2121444')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 11:01:53 --> syntax error, unexpected token "else", expecting "," or ";"
+in APPPATH\Views\crud.php on line 42.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('crud', [], true)
+ 3 APPPATH\Controllers\Crud.php(11): view('crud', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Crud->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 11:02:39 --> syntax error, unexpected token "endforeach"
+in APPPATH\Views\crud.php on line 48.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('crud', [], true)
+ 3 APPPATH\Controllers\Crud.php(11): view('crud', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Crud->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 11:03:40 --> syntax error, unexpected token ":", expecting ";"
+in APPPATH\Views\crud.php on line 42.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('crud', [], true)
+ 3 APPPATH\Controllers\Crud.php(11): view('crud', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Crud->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 11:03:41 --> syntax error, unexpected token ":", expecting ";"
+in APPPATH\Views\crud.php on line 42.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('crud', [], true)
+ 3 APPPATH\Controllers\Crud.php(11): view('crud', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Crud->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 11:16:30 --> Trying to access array offset on value of type null
+in APPPATH\Views\edit.php on line 18.
+ 1 APPPATH\Views\edit.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\crud_in_ci\\app\\Views\\edit.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\crud_in_ci\\app\\Views\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('edit', [], true)
+ 5 APPPATH\Controllers\Crud.php(34): view('edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Crud->edit('2121141')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

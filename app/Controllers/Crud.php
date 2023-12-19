@@ -48,7 +48,7 @@ class Crud extends BaseController
 
     public function delete($id = null){
         $model = new StudentModel();
-        $data['user'] = $model->where('urn', $id)->delete();
+        $deleted = $model->delete($id);
         return redirect('Crud');
     }
 }
